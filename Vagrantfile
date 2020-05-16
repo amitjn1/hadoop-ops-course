@@ -2,7 +2,7 @@ Vagrant.configure(2) do |config|
   config.ssh.insert_key = false 
   config.vm.define "node1" do |node1|
     node1.vm.box = "geerlingguy/centos7"
-    node1.vm.box_version = "1.2.3"
+    node1.vm.box_version = "1.2.22"
     node1.vm.network "private_network", ip: "192.168.199.2"
     node1.vm.hostname = "node1.example.com"
     node1.vm.provision "shell", path: "scripts/install_ambari_server.sh"
